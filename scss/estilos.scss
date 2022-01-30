@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+@import "variables";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(33,37,41,1) 0%,rgba(178,178,178,1) 100%);
+	h1{
+		font-family: lato;
+		font-weight: 300;
+		color: black;
+	}
+
+	div{
+		p{
+		font-family: lato, sans serif;
+		font-weight: 300;
+		font-size: $m;
+		color: white;
+		text-align: center;
+		}	
+
+		a{
+			text-decoration: none;
+		}
+
+		label{
+			font-family: lato, sans-serif;
+			font-weight: 400;
+			font-size: $ch;
+			color: $amarillo;
+		}
+
+		button{
+			font-family: lato, sans serif;
+			font-weight: 300;
+			font-size: $ch;
+		}
+	}
+
+		
+	p{
+		font-family: lato, sans-serif;
+		font-weight: 300;
+		font-size: $m;
+		color: white;
+		text-align: center;
+		padding-left: $ch;
+	}
+
+
+	footer{
+		height: 20px;
+	}
+}
+
+/* INDEX ----------------------------------- */
+
+@keyframes entradaizq{
+	from{
+		transform: translateX(-500px);
+	}	
+}
+
+#contIndex1{
+	animation: entradaizq;
+	animation-delay: 0s;
+	animation-duration: 2s;
+}
+
+#contIndex2{
+	animation: entradaizq; 
+	animation-delay: 500ms;
+	animation-duration: 2s;
+}
+	
+#contIndex3{
+	animation: entradaizq;
+	animation-delay: 1s;
+	animation-duration: 2s;
+}
+
+#contIndex4{
+	animation: entradaizq;
+	animation-delay: 1500ms;
+	animation-duration: 2s;
+}
+
+#contIndex1, #contIndex2, #contIndex3, #contIndex4{
+
+	background-color: $amarillo;
+
+	span{
+		font-family: lato;
+		font-weight: 400;
+		font-size: $m;
+		font-weight: bold;
+		color: black;
+	}
+
+	p{
+		font-family: lato;
+		font-weight: 300;
+		font-size: $m;
+		color: black;
+	}	
+	
+	@media all and (max-width: 768px){;
+		
+		span{
+			font-size: $m;
+		}
+
+		p{
+			font-size: $ch;
+		}
+		
+		img{
+		display: none;
+		}
+	}
+}
+
+/* QUIÉNES SOMOS ----------------------------------- */
+
+@keyframes entradader{
+	from{
+		transform: translateX(500px);
+	}	
+}
+
+#contadores{
+	font-family: Lato;
+	font-size: $m;
+	font-weight: 300;
+	color: #black;
+	display: grid;
+	grid-template-areas:
+	"imagen1 descripción1 descripción1"
+	"descripción2 descripción2 imagen2";
+	width: 90%;
+	margin-top: 50px;
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+	justify-items: stretch;
+}
+
+.descripción1{
+	grid-area: descripción1;
+	animation: entradader;
+	animation-duration: 2s;
+	@inclu1de $fondo;
+	}
+
+.descripción2{
+	grid-area: descripción2;
+	background-color: $gris;
+	animation: entradaizq;
+	animation-duration: 2s;
+}
+
+.imagen1{
+	grid-area: imagen1;
+	background-image: url(../assets/contador1.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	padding-left: 200px;
+	animation: entradaizq;
+	animation-duration: 2s;
+}
+
+.imagen2{
+	grid-area: imagen2;
+	background-image: url(../assets/contador2.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	padding-right: 200px;
+	animation: entradader;
+	animation-duration: 2s;
+}
+
+#contadores{	
+	@media all and (max-width: 768px){
+		display: none;
+		}
+}
+
+#contadoresmob{	
+	img{
+		height: 100%;
+		width: 100%
+	}
+
+	@media all and (min-width: 768px){
+		display: none;
+		}
+
+}
+
+/* SERVICIOS ----------------------------------- */
+
+#contenedor{
+	font-family: Lato;
+	font-size: $m;
+	font-weight: 300;
+	color: #black;
+	display: grid;
+	grid-template-areas:
+	"dec foto foto"
+	"liq emp ase";
+	height: 80vh;
+	width: 90%;
+	margin-top: 50px;
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+	justify-items: stretch;
+}
+
+#contenedor{
+	@media all and (max-width: 768px){
+		display: none;
+		}
+}
+
+#contenedorM{
+	height: 80vh;
+	padding-top: $g;
+	@media all and (min-width: 768px){
+		display: none;
+		}
+	p{
+		font-size: $ch;
+	}
+	.declaracion, .liquidacion, .empresa, .asesoramiento{
+		height: 5.5rem;
+	}
+
+	.subtitle{
+		text-align: center;
+		font-size: $m;
+	}
+}
+
+.textbox{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: 100%;
+}
+
+.subtitle{
+	font-family: Lato;
+	font-size: $g;
+	color: #black;
+	justify-content: center;
+	span{
+		font-family: lato;
+		font-weight: 400;
+		font-size: $m;
+		font-weight: bold;
+		color: black;
+		text-align: center;
+	}
+	p{
+		font-family: lato;
+		font-weight: 300;
+		font-size: $m;
+		color: black;
+		text-align: center;
+	}	
+}
+
+.declaracion{
+	grid-area: dec;
+}
+.liquidacion{
+	grid-area: liq;
+}
+.empresa{
+	grid-area: emp;
+}
+.asesoramiento{
+	grid-area: ase;
+}
+
+.declaracion, .liquidacion, .empresa, .asesoramiento{
+	background-color: $amarillo;
+	justify-items: stretch;
+}
+
+.imagen{
+	grid-area: foto;
+	background-image: url(../assets/2.jpg);
+	background-size: cover;
+	background-position: center;
+	animation: entradader;
+	animation-duration: 2s;
+}
+
+/* EXPERIENCIAS ----------------------------------- */
+
+#opinion1, #opinion2, #opinion3, #opinion4, #contEx{
+	animation: entradasup;
+	animation-duration: 2s;
+}
+	
+@keyframes entradasup{
+	from{
+		transform: translateY(1000px);
+	}	
+}
+
+/* CONTACTO ----------------------------------- */
+
+.ContenedorContacto{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 90vh;
+
+		#formulario{
+			padding-left: $ch;
+			justify-content: flex-start;
+		}
+		#contactlogo{
+			padding-top: 80px;
+			padding-left: 90px;
+			padding-bottom: 80px;
+			padding-right: 80px;		
+		}
+		button{
+			font-family: lato, sans-serif;
+			font-weight: 400;
+			font-size: $ch;
+			color: black;
+			text-align: center;
+		}
+}
+
+#contactlogo{
+	@media all and (max-width: 768px){
+		display: none;
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

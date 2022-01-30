@@ -1,0 +1,14 @@
+/* COLORES DE LA PALETA */
+
+$amarillo: #ffc107;
+$gris: #ccc;
+
+/* TAMAÑOS HABITUALES*/
+
+$ch: 1rem;
+$m: 1.5rem;
+$g: 2rem;
+
+@mixin fondo{
+	color: $gris
+}

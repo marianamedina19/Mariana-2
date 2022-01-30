@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+*{
+
+	margin: 0;
+	padding: 0;
+}
+
+#navbar-brand{
+	color: yellow;
+}
+
+.logo{
+	background-image: url(buscarimagen);
+}
+
+#banner{
+	background-image: url(assets/2.jpg);
+	background-position: center;
+	min-height: 300px;
+	height: 50vh;
+}
+
+#contenedorServicio{
+	height: 100%;
+}
+
+.declaracion:hover{
+	scale: 1.1;
+	transition-duration: 200ms;
+}
+
+.extra{
+	font-family: lato;
+	font-size: 1rem;
+	display: none;
+}
+
+.declaracion:hover .extra{
+	display:  block;
+}
+
+/*
+ACÁ INTENTÉ MOSTRAR UN DIV CUANDO declaracion
+ESTÁ EN HOVER PERO NO ME APARECIÓ, 
+LO PROBÉ EN OTRO PROYECTO Y ANDUVO, 
+CREO QUE ES POR EL USO DE ID
+
+#info1{ 
+	display: none ;
+} 
+
+#cont1:hover + #info1{
+	display: block;
+}
+*/
+
+.liquidacion:hover{
+	scale: 1.1;
+	transition-duration: 200ms;
+}
+
+.liquidacion:hover .extra{
+	display:  block;
+}
+
+/*antes era: ;
+#cont1: hover{
+	scale: 1.1;
+	transition-duration: 200ms;
+}*/
+
+.empresa:hover{
+	scale: 1.1;
+	transition-duration: 200ms;
+}
+
+.empresa:hover .extra{
+	display:  block;
+}
+
+
+.asesoramiento:hover{
+	scale: 1.1;
+	transition-duration: 200ms;
+}
+
+.asesoramiento:hover .extra{
+	display:  block;
+}
+
+
+/*FALTA ANIMAR ACA*/
+
+@keyframes entrada{
+	from{
+		transform: translateX(-500px);
+	}	
+}
+
+#contIndex1{
+	animation: entrada;
+	animation-delay: 0s;
+	animation-duration: 2s;
+}
+
+
+#contIndex2{
+	animation: entrada; 
+	animation-delay: 500ms;
+	animation-duration: 2s;
+}
+
+#contIndex3{
+	animation: entrada; 
+	animation-delay: 1s;
+	animation-duration: 2s;
+}
+
+#contIndex4{
+	animation: entrada; 
+	animation-delay: 1500ms;
+	animation-duration: 2s;
+}
+
+#formulario{
+	display: grid;
+	grid-row: 50vh;
+	grid-row-gap: 2rem;
+	padding-top: 20px;
+	justify-items: start;
+	width: 100%;
+	justify-content: left;
+}
+
+h1{
+	font-family: lato;
+	font-weight: 400;
+}
+
+h2, h4, h5, h6{
+	font-family: lato;
+	font-weight: 300;
+}
+
+body{
+	height: 100%;
+	background: linear-gradient(to bottom,  rgba(181,181,181,1) 0%,rgba(73,73,73,1) 100%);
+}
+
+
+/*Grid en Sevicios, todavía no pude hacer en Bootstrap*/
+
+#contenedor{
+	font-family: Lato;
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: #black;
+	display: grid;
+	grid-template-areas:
+	"dec foto foto"
+	"liq emp ase";
+	height: 80vh;
+	width: 90%;
+	margin-top: 50px;
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+	justify-items: stretch;
+}
+
+.textbox{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	height: 100%;
+}
+
+.subtitle{
+	font-family: Lato
+	font-size: 2rem;
+	color: #black;
+}
+
+.declaracion{
+	grid-area: dec;
+	background-color: #DCAC01;
+	justify-items: stretch;
+}
+
+.liquidacion{
+	grid-area: liq;
+	background-color: #DCAC01;
+}
+
+.empresa{
+	grid-area: emp;
+	background-color: #DCAC01;
+	justify-items: stretch;
+}
+.asesoramiento{
+	grid-area: ase;
+	background-color: #DCAC01;
+	justify-items: stretch;
+}
+.imagen{
+	grid-area: foto;
+	background-image: url(../assets/2.jpg);
+	background-size: cover;
+	background-position: center;
+	animation: ease-in-out;
+	animation-duration: 200ms;
+}

@@ -1,0 +1,353 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
+/* COLORES DE LA PALETA */
+/* TAMAÑOS HABITUALES*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(to bottom, #212529 0%, #b2b2b2 100%);
+}
+
+body h1 {
+  font-family: lato;
+  font-weight: 300;
+  color: black;
+}
+
+body div p {
+  font-family: lato, sans serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+body div a {
+  text-decoration: none;
+}
+
+body div label {
+  font-family: lato, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ffc107;
+}
+
+body div button {
+  font-family: lato, sans serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+body p {
+  font-family: lato, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding-left: 1rem;
+}
+
+body footer {
+  height: 20px;
+}
+
+/* INDEX ----------------------------------- */
+@keyframes entradaizq {
+  from {
+    transform: translateX(-500px);
+  }
+}
+
+#contIndex1 {
+  animation: entradaizq;
+  animation-delay: 0s;
+  animation-duration: 2s;
+}
+
+#contIndex2 {
+  animation: entradaizq;
+  animation-delay: 500ms;
+  animation-duration: 2s;
+}
+
+#contIndex3 {
+  animation: entradaizq;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+
+#contIndex4 {
+  animation: entradaizq;
+  animation-delay: 1500ms;
+  animation-duration: 2s;
+}
+
+#contIndex1, #contIndex2, #contIndex3, #contIndex4 {
+  background-color: #ffc107;
+}
+
+#contIndex1 span, #contIndex2 span, #contIndex3 span, #contIndex4 span {
+  font-family: lato;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+#contIndex1 p, #contIndex2 p, #contIndex3 p, #contIndex4 p {
+  font-family: lato;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: black;
+}
+
+@media all and (max-width: 768px) {
+  #contIndex1 span, #contIndex2 span, #contIndex3 span, #contIndex4 span {
+    font-size: 1.5rem;
+  }
+  #contIndex1 p, #contIndex2 p, #contIndex3 p, #contIndex4 p {
+    font-size: 1rem;
+  }
+  #contIndex1 img, #contIndex2 img, #contIndex3 img, #contIndex4 img {
+    display: none;
+  }
+}
+
+/* QUIÉNES SOMOS ----------------------------------- */
+@keyframes entradader {
+  from {
+    transform: translateX(500px);
+  }
+}
+
+#contadores {
+  font-family: Lato;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #black;
+  display: grid;
+  grid-template-areas: "imagen1 descripción1 descripción1" "descripción2 descripción2 imagen2";
+  width: 90%;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  justify-items: stretch;
+}
+
+.descripción1 {
+  grid-area: descripción1;
+  animation: entradader;
+  animation-duration: 2s;
+  @inclu1de $fondo;
+}
+
+.descripción2 {
+  grid-area: descripción2;
+  background-color: #ccc;
+  animation: entradaizq;
+  animation-duration: 2s;
+}
+
+.imagen1 {
+  grid-area: imagen1;
+  background-image: url(../assets/contador1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  padding-left: 200px;
+  animation: entradaizq;
+  animation-duration: 2s;
+}
+
+.imagen2 {
+  grid-area: imagen2;
+  background-image: url(../assets/contador2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  padding-right: 200px;
+  animation: entradader;
+  animation-duration: 2s;
+}
+
+@media all and (max-width: 768px) {
+  #contadores {
+    display: none;
+  }
+}
+
+#contadoresmob img {
+  height: 100%;
+  width: 100%;
+}
+
+@media all and (min-width: 768px) {
+  #contadoresmob {
+    display: none;
+  }
+}
+
+/* SERVICIOS ----------------------------------- */
+#contenedor {
+  font-family: Lato;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #black;
+  display: grid;
+  grid-template-areas: "dec foto foto" "liq emp ase";
+  height: 80vh;
+  width: 90%;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  justify-items: stretch;
+}
+
+@media all and (max-width: 768px) {
+  #contenedor {
+    display: none;
+  }
+}
+
+#contenedorM {
+  height: 80vh;
+  padding-top: 2rem;
+}
+
+@media all and (min-width: 768px) {
+  #contenedorM {
+    display: none;
+  }
+}
+
+#contenedorM p {
+  font-size: 1rem;
+}
+
+#contenedorM .declaracion, #contenedorM .liquidacion, #contenedorM .empresa, #contenedorM .asesoramiento {
+  height: 5.5rem;
+}
+
+#contenedorM .subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.textbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+}
+
+.subtitle {
+  font-family: Lato;
+  font-size: 2rem;
+  color: #black;
+  justify-content: center;
+}
+
+.subtitle span {
+  font-family: lato;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.subtitle p {
+  font-family: lato;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+.declaracion {
+  grid-area: dec;
+}
+
+.liquidacion {
+  grid-area: liq;
+}
+
+.empresa {
+  grid-area: emp;
+}
+
+.asesoramiento {
+  grid-area: ase;
+}
+
+.declaracion, .liquidacion, .empresa, .asesoramiento {
+  background-color: #ffc107;
+  justify-items: stretch;
+}
+
+.imagen {
+  grid-area: foto;
+  background-image: url(../assets/2.jpg);
+  background-size: cover;
+  background-position: center;
+  animation: entradader;
+  animation-duration: 2s;
+}
+
+/* EXPERIENCIAS ----------------------------------- */
+#opinion1, #opinion2, #opinion3, #opinion4, #contEx {
+  animation: entradasup;
+  animation-duration: 2s;
+}
+
+@keyframes entradasup {
+  from {
+    transform: translateY(1000px);
+  }
+}
+
+/* CONTACTO ----------------------------------- */
+.ContenedorContacto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 90vh;
+}
+
+.ContenedorContacto #formulario {
+  padding-left: 1rem;
+  justify-content: flex-start;
+}
+
+.ContenedorContacto #contactlogo {
+  padding-top: 80px;
+  padding-left: 90px;
+  padding-bottom: 80px;
+  padding-right: 80px;
+}
+
+.ContenedorContacto button {
+  font-family: lato, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+}
+
+@media all and (max-width: 768px) {
+  #contactlogo {
+    display: none;
+  }
+}
